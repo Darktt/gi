@@ -9,30 +9,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Setup
 
 ```bash
-# Activate virtual environment (Python 3.13)
+# 建立並啟動虛擬環境
+python3.13 -m venv venv
 source venv/bin/activate
 
-# Install dependencies
-pip install requests
+# 安裝依賴
+pip install requests pyinstaller
 ```
 
 ## Running the Tool
 
 ```bash
 # Directly with Python
-python gi.py python,java
+python gi.py python,macos
 
 # Using the compiled binary
-./dist/gi/gi python,java
+./dist/gi/gi python,macos
 ```
-
-The tool writes `.gitignore` to the current working directory.
 
 ## Building the Binary
 
 ```bash
-# Activate venv first, then build with PyInstaller
-source venv/bin/activate
 pyinstaller gi.spec
 ```
 
